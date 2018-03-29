@@ -5,10 +5,10 @@ import NavBar from './Navbar';
 
 class FontHelper extends Component {
     state = {
-        font: null
+        font: 'Work Sans, sans-serif'
     }
 
-    onGrabFonts = (font) => {
+    onGrabFonts = font => {
         this.setState(() => ({ font }));
     }
 
@@ -16,7 +16,6 @@ class FontHelper extends Component {
         const styles = {
             fontFamily: this.state.font
         }
-        // let fontFamily = { fontFamily: this.state.font};
 
         return (
             <div style={styles}>

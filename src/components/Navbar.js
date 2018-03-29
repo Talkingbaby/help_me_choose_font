@@ -5,18 +5,7 @@ import Typography from 'material-ui/Typography';
 import { MenuItem } from 'material-ui/Menu';
 import Select from 'material-ui/Select';
 
-const fonts = [
-    'Open Sans, sans-serif',
-    'Josefin Slab, serif',
-    'Arvo, serif',
-    'Lato, sans-serif',
-    'Vollkorn, serif',
-    'Abril Fatface, cursive',
-    'Ubuntu, sans-serif',
-    'PT Sans, sans-serif',
-    'PT Serif, serif',
-    'Old Standard TT, serif'
-]
+import fonts from './fonts';
 
 const styles = {
     root: {
@@ -31,12 +20,13 @@ const styles = {
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = { value: 'Open Sans, sans-serif' };
+        this.state = { value: 'Work Sans, sans-serif' };
     }
 
     handleChange = (event) => {
-        this.setState({ value: event.target.value });
-        this.props.onGrabFonts(this.state.value)
+        let value = event.target.value;
+        this.setState({ value });
+        this.props.onGrabFonts(value)
     }
 
     render() {
@@ -51,7 +41,7 @@ class Navbar extends Component {
                             value={this.state.value}
                             onChange={this.handleChange}
                         >
-                            {fonts.map((font) => <MenuItem key={font} value={font}>{font}</MenuItem>)}
+                            {fonts.map(font => <MenuItem key={font} value={font}>{font}</MenuItem>)}
                         </Select>
                     </Toolbar>
                 </AppBar>
