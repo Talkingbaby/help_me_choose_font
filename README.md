@@ -8,7 +8,8 @@ A react component that gives the user a choice of popular fonts to see what work
 3. The component does use the latest version of Material UI. Make sure to have it added as a dependency. 
   * You can find it here [https://material-ui-next.com/getting-started/installation/](https://material-ui-next.com/getting-started/installation/)
 4. import FontHelper into the root of your app and wrap component around app.
-    ```<FontHelper>
+    ```
+    <FontHelper>
         <App />
     </FontHelper>
     ```
