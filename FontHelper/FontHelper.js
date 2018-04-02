@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'normalize.css';
 
 import NavBar from './Navbar';
 

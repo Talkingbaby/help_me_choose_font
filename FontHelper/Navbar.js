@@ -35,7 +35,7 @@ class Navbar extends Component {
                 <AppBar position="static" color="default">
                     <Toolbar style={styles.root}>
                         <Typography variant="title" color="inherit">
-                            Help Me Choose a Font
+                            Help My Fonts
                         </Typography>
                         <Select
                             value={this.state.value}
